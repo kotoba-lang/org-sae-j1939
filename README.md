@@ -99,8 +99,8 @@ longer be trusted to be contiguous, so both are refused the same way.
 ## Verify
 
 ```sh
-clojure -M:test                                                       # JVM
-nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljk  # ClojureScript
+kbb -M:test                                                       # JVM
+kbb --backend sci --classpath "$(kbb -A:cljs -Spath)" scripts/verify-cljs.cljk  # ClojureScript
 ```
 
 Real counts as run for this README: **25 tests, 15087 assertions, 0
@@ -130,7 +130,7 @@ Discrimination of the negative-test suite was checked by hand: the
 sequence-number check in `j1939.tp/add-data-transfer` —
 `(not= sequence-number (:next-sequence session))` — was replaced with a
 hardcoded `false`, so any sequence number (including a gap or a repeat)
-would be silently accepted into the reassembly buffer. `clojure -M:test`
+would be silently accepted into the reassembly buffer. `kbb -M:test`
 then failed with exactly the two tests that exercise this path —
 `tp-sequence-gap-is-refused` and
 `tp-sequence-gap-also-catches-a-duplicate-packet` — both showing the
