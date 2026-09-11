@@ -7,7 +7,7 @@
 ;; sweep is the thing that actually proves it on the runtime whose bitwise
 ;; operators are the ones with a 32-bit ceiling in the first place.
 ;;
-;;   nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljs
+;;   nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljk
 (ns verify-cljs
   (:require [clojure.test :as t]
             [j1939.core-test]))

@@ -3,6 +3,6 @@
   "private": true,
   "description": "SAE J1939 CAN identifier/PGN codec and transport protocol reassembly in portable .cljc",
   "scripts": {
-    "test:cljs": "nbb --classpath \"$(clojure -A:cljs -Spath)\" scripts/verify-cljs.cljs"
+    "test:cljs": "nbb --classpath \"$(clojure -A:cljs -Spath)\" scripts/verify-cljs.cljk"
   }
 }
