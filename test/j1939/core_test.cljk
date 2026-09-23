@@ -4,7 +4,7 @@
   same in every J1939 stack. Concrete example identifiers/PGNs not called
   out as a specification constant are `;; constructed, not a published
   spec vector`."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [j1939.identifier :as id]
             [j1939.tp :as tp]
             [j1939.spn :as spn]))
